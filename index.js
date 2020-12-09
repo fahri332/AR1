@@ -1,7 +1,6 @@
 /*
 * JANGAN UBAH-UBAH INFO!!!
 * "JANGAN MODAL NAMA DOANG BRO!!!"
-* SCRIPT BY ARIS187 ID
 * JANGAN MODAL NAMA DOANG BOSQ
 * HARGAILAH YY MEMBUAT SCRIPT INI BOSQ
 * JANGAN UBAH-UBAH INFO!!!
@@ -11,7 +10,7 @@
 const A187 = '👾3XPLOR5 BOT👾'; // JANGAN UBAH-UBAH INFO!!!
 const instagram = 'https://instagram.com/Monkey_Frer02'; // JANGAN UBAH-UBAH INFO!!!
 const nomer = 'Wa.me/+628994857306'; // JANGAN UBAH-UBAH INFO!!!
-const aktif = 'Tergantung jaringan'; // JANGAN UBAH-UBAH INFO!!!
+const aktif = '24JAM'; // JANGAN UBAH-UBAH INFO!!!
 const groupwhatsapp = ''; // JANGAN UBAH-UBAH INFO!!!
 const youtube = ''; // JANGAN UBAH-UBAH INFO!!!
 //A187ID
