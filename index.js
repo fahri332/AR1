@@ -1,19 +1,19 @@
 /*
 * JANGAN UBAH-UBAH INFO!!!
 * "JANGAN MODAL NAMA DOANG BRO!!!"
-* SCRIPT BY ARIS187 ID
+* SCRIPT BY 3XPLOR5.7
 * JANGAN MODAL NAMA DOANG BOSQ
 * HARGAILAH YY MEMBUAT SCRIPT INI BOSQ
 * JANGAN UBAH-UBAH INFO!!!
-* ARIS187 ID
+* 3XPLOR5.7 
 * BOLEH UBAH TAPI KECUALI INFO!!!
 */
-const A187 = '👾AR15BOT👾'; // JANGAN UBAH-UBAH INFO!!!
-const instagram = 'https://instagram.com/_sadboy.ig'; // JANGAN UBAH-UBAH INFO!!!
-const nomer = 'Wa.me/+6285722553839'; // JANGAN UBAH-UBAH INFO!!!
+const A187 = '👾3XPLOR5.7 BOT👾'; // JANGAN UBAH-UBAH INFO!!!
+const instagram = 'https://instagram.com/Monkey_Free02'; // JANGAN UBAH-UBAH INFO!!!
+const nomer = 'Wa.me/+6289614168968'; // JANGAN UBAH-UBAH INFO!!!
 const aktif = 'Tergantung jaringan'; // JANGAN UBAH-UBAH INFO!!!
-const groupwhatsapp = 'https://chat.whatsapp.com/GU6NsgZvfgw37vrjIxUPhP'; // JANGAN UBAH-UBAH INFO!!!
-const youtube = 'https://www.youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg'; // JANGAN UBAH-UBAH INFO!!!
+const groupwhatsapp = 'https://chat.whatsapp.com/DEWMa6cJ3wO5v8oMjsXX2m'; // JANGAN UBAH-UBAH INFO!!!
+const My website = 'www.destroysquad.com'; // JANGAN UBAH-UBAH INFO!!!
 //A187ID
 const qrcode = require("qrcode-terminal");
 const moment = require("moment");
