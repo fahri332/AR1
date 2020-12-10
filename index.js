@@ -10,7 +10,7 @@
 const A187 = '👾3XPLOR5 BOT👾'; // JANGAN UBAH-UBAH INFO!!!
 const instagram = 'https://instagram.com/Monkey_Frer02'; // JANGAN UBAH-UBAH INFO!!!
 const nomer = 'Wa.me/+628994857306'; // JANGAN UBAH-UBAH INFO!!!
-const aktif = '24JAM'; // JANGAN UBAH-UBAH INFO!!!
+const aktif = 'Online Tergantung Sama Jaringan'; // JANGAN UBAH-UBAH INFO!!!
 const groupwhatsapp = ''; // JANGAN UBAH-UBAH INFO!!!
 const youtube = ''; // JANGAN UBAH-UBAH INFO!!!
 //A187ID
@@ -299,19 +299,21 @@ if (text.includes('!tts')){
     })
 }
 
-//Media
-        if (text.includes("!ytmp3")){
-            if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
-            const linkmp3 = args[0].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
-			rugaapi.ytmp3(`https://youtu.be/${linkmp3}`)
-            .then(async(res) => {
-				if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
-				await aruga.sendFileFromUrl(from, `${res.result.thumb}`, '', `Lagu ditemukan\n\nJudul: ${res.result.title}\nDesc: ${res.result.desc}\nSabar lagi dikirim`, id)
-				await aruga.sendFileFromUrl(from, `${res.result.url}`, '', '', id)
-				.catch(() => {
-					aruga.reply(from, `URL INI ${args[0]} SUDAH PERNAH DI DOWNLOAD SEBELUMNYA ..URL AKAN RESET SETELAH 60 MENIT`, id)
-				})
-			})
+if (text.includes("!ytmp3")){
+
+const aris = text.replace(/!ytmp3 /, "")
+
+axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${aris}`).then((res) => {
+
+	conn.sendMessage(id, '[❗] WAIT SEDANG DIPROSES', MessageType.text)
+
+    let hasil = `*Judul:* ${res.data.title}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
+
+    conn.sendMessage(id, hasil ,MessageType.text);
+
+})
+
+}
 if (text.includes("!infoig")){
   const teks = text.replace(/!infoig /, "")
   axios.get(`https://alfians-api.herokuapp.com/api/stalk?username=${teks}`).then ((res) =>{
@@ -338,61 +340,23 @@ axios.get(`https://alfians-api.herokuapp.com/api/chord?q=${teks}`).then((res) =>
 }
 
 
-if (text.includes("!resi")){
-            if (args.length !== 2) return aruga.reply(from, `Maaf, format pesan salah.\nSilahkan ketik pesan dengan ${prefix}resi <kurir> <no_resi>\n\nKurir yang tersedia:\njne, pos, tiki, wahana, jnt, rpx, sap, sicepat, pcp, jet, dse, first, ninja, lion, idl, rex`, id)
+if (text.includes("!ytmp4")){
 
-            const kurirs = ['jne', 'pos', 'tiki', 'wahana', 'jnt', 'rpx', 'sap', 'sicepat', 'pcp', 'jet', 'dse', 'first', 'ninja', 'lion', 'idl', 'rex']
+const aris = text.replace(/!ytmp4 /, "")
 
-            if (!kurirs.includes(args[0])) return aruga.sendText(from, `Maaf, jenis ekspedisi pengiriman tidak didukung layanan ini hanya mendukung ekspedisi pengiriman ${kurirs.join(', ')} Tolong periksa kembali.`)
+axios.get(`https://alfians-api.herokuapp.com/api/ytv?url=${aris}`).then((res) => {
 
-            console.log('Memeriksa No Resi', args[1], 'dengan ekspedisi', args[0])
+	conn.sendMessage(id, '[❗] WAIT SEDANG DIPROSES', MessageType.text)
 
-            cekResi(args[0], args[1]).then((result) => aruga.sendText(from, result))
-	})
-}
+    let hasil = ` *Judul:* ${res.data.title}\n\n *Tipe:* ${res.data.ext}\n\n *Resolution:* ${res.data.resolution}\n\n *Zize:* ${res.data.filesize}\n\n *Video:* ${res.data.result}`;
 
-if (text.includes("!translate")){
+    conn.sendMessage(id, hasil ,MessageType.text);
 
-            if (args.length != 1) return aruga.reply(from, `Maaf, format pesan salah.\nSilahkan reply sebuah pesan dengan caption ${prefix}translate <kode_bahasa>\ncontoh ${prefix}translate id`, id)
-
-            if (!quotedMsg) return aruga.reply(from, `Maaf, format pesan salah.\nSilahkan reply sebuah pesan dengan caption ${prefix}translate <kode_bahasa>\ncontoh ${prefix}translate id`, id)
-
-            const quoteText = quotedMsg.type == 'chat' ? quotedMsg.body : quotedMsg.type == 'image' ? quotedMsg.caption : ''
-
-            translate(quoteText, args[0])
-
-                .then((result) => aruga.sendText(from, result))
-
-                .catch(() => aruga.sendText(from, 'Error, Kode bahasa salah.'))
 })
 
 }
+              
 
-
-
-if (text.includes("!ytmp4")){
-
-            if (args.length == 0) return aruga.reply(from, `Untuk mendownload lagu dari youtube\nketik: ${prefix}ytmp3 [link_yt]`, id)
-
-            const linkmp4 = args[0].replace('https://youtu.be/','').replace('https://www.youtube.com/watch?v=','')
-
-			rugaapi.ytmp4(`https://youtu.be/${linkmp4}`)
-
-            .then(async(res) => {
-
-				if (res.error) return aruga.sendFileFromUrl(from, `${res.url}`, '', `${res.error}`)
-
-				await aruga.sendFileFromUrl(from, `${res.result.thumb}`, '', `Lagu ditemukan\n\nJudul: ${res.result.title}\nDesc: ${res.result.desc}\nSabar lagi dikirim`, id)
-
-				await aruga.sendFileFromUrl(from, `${res.result.url}`, '', '', id)
-
-				.catch(() => {
-
-					aruga.reply(from, `URL INI ${args[0]} SUDAH PERNAH DI DOWNLOAD SEBELUMNYA ..URL AKAN RESET SETELAH 60 MENIT`, id)
-
-				})
-
-			})
 
 if (text.includes("!twt")){
 const teks = text.replace(/!twt /, "")
