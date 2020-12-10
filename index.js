@@ -301,7 +301,7 @@ if (text.includes('!tts')){
 
 if (text.includes("!ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
-axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) => {
+axios.get(`ytmp3.mobi/button-api/#YOUTUBE_VIDEO_ID?url=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
     let hasil = `*Judul:* ${res.data.title}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
@@ -335,7 +335,7 @@ axios.get(`https://alfians-api.herokuapp.com/api/chord?q=${teks}`).then((res) =>
 
 if (text.includes("!ytmp4")){
 const teks = text.replace(/!ytmp4 /, "")
-axios.get(`https://alfians-api.herokuapp.com/api/ytv?url=${teks}`).then((res) => {
+axios.get(`https://ytmp3.mobi/button-api/#YOUTUBE_VIDEO_ID?url={teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
     let hasil = ` *Judul:* ${res.data.title}\n\n *Tipe:* ${res.data.ext}\n\n *Resolution:* ${res.data.resolution}\n\n *Zize:* ${res.data.filesize}\n\n *Audio:* ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
