@@ -1006,7 +1006,7 @@ conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾3XPLOR5.7 BOT�
  
    if (text.includes("!quotes"))
    {
-      var url = 'https://jagokata.com/kata-bijak/acak.html'
+      var url = 'https://jagokata.com/kata-bijak/popular.html'
       axios.get(url)
          .then((result) =>
          {
